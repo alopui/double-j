@@ -59,6 +59,14 @@
             text-align: right;
         }
 
+        .pagination {
+            display: block;
+            text-align: center;
+        }
+
+        .pagination > li > a {
+            float: none;
+        }
 
     </style>
 
@@ -95,10 +103,8 @@
                     <!--<li><a href="#">One more separated link</a></li>-->
                     <!--</ul>-->
                     <!--</li>-->
-                </ul>
-                <!--<form class="form-inline" role="form">-->
-                    <button type="button" id="modalbtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@twbootstrap">로그인</button>
-
+                    <!--<button type="button" id="modalbtn" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@twbootstrap">로그인</button>-->
+                    <li><a href="#" id="modalbtn"  data-toggle="modal" data-target="#exampleModal" data-whatever="@twbootstrap">로그인</a></li>
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -119,12 +125,42 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="main%20vol3(nav%20vol1).html" class="btn btn-primary">로그인</a>
+                                    <a href="main_page_afterlogin.html" class="btn btn-primary">로그인</a>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </ul>
+                <!--<form class="form-inline" role="form">-->
+                    <!--<button type="button" id="modalbtn" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@twbootstrap">로그인</button>-->
+
+
+                    <!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+                        <!--<div class="modal-dialog">-->
+                            <!--<div class="modal-content">-->
+                                <!--<div class="modal-header">-->
+                                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                                <!--</div>-->
+                                <!--<div class="modal-body">-->
+                                    <!--<form>-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label for="user_ID" class="control-label">아이디:</label>-->
+                                            <!--<input type="text" class="form-control" id="user_ID">-->
+                                        <!--</div>-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label for="user_password" class="control-label">비밀번호:</label>-->
+                                            <!--<input type="text" class="form-control" id="user_password">-->
+                                        <!--</div>-->
+                                    <!--</form>-->
+                                <!--</div>-->
+                                <!--<div class="modal-footer">-->
+                                    <!--<a href="main%20vol3(nav%20vol1).html" class="btn btn-primary">로그인</a>-->
+                                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 <!--</form>-->
             </div><!--/.nav-collapse -->
         </div>
@@ -154,25 +190,25 @@
                 <table class="table table-hover" id="posting_table">
                     <tr class="posting_element">
                         <td>
-                            <label for="posting_number">글 번호</label>
+                            <strong>글 번호</strong>
                         </td>
                         <td>
-                            <label for="posting_writer">글쓴이</label>
+                            <strong>글쓴이</strong>
                         </td>
                         <td>
-                            <label for="posting_title">제목</label>
+                            <strong>제목</strong>
                         </td>
                         <td>
-                            <label for="posting_tradingcondition">거래상황</label>
+                            <strong>거래상황</strong>
                         </td>
                         <td>
-                            <label for="posting_view">조회수</label>
+                            <strong>조회수</strong>
                         </td>
                         <td>
-                            <label for="posting_date">올린 날</label>
+                            <strong>올린 날</strong>
                         </td>
                         <td>
-                            <label for="posting_sort">종류</label>
+                            <strong>종류</strong>
                         </td>
                     </tr>
                     <tr>
@@ -266,6 +302,7 @@
                         <td>전공</td>
                     </tr>
                 </table>
+
                 <ul class="pagination" id="pagination">
                     <li><a href="#">«</a></li>
                     <li><a href="#">1</a></li>
@@ -278,10 +315,18 @@
                     <li><a href="#">8</a></li>
                     <li><a href="#">9</a></li>
                     <li><a href="#">»</a></li>
+                    <!--<ul class="nav navbar-nav navbar-right">-->
+                        <!--<li><a href="posting%20vol2.html" id="writing" type="button"  class="btn btn-default">글쓰기</a></li>-->
+                    <!--</ul>-->
                 </ul>
-                <a href="posting%20vol2.html" type="button"  class="btn btn-default">글쓰기</a>
+                <!--<ul class="nav navbar-nav navbar-right">-->
+                <a href="posting%20vol2.html" id="writing" type="button"  class="btn btn-default pull-right btn-md">글쓰기</a>
+                <!--</ul>-->
+                <!--<a href="posting%20vol2.html" id="writing" type="button"  class="btn btn-default">글쓰기</a>-->
             </section>
+
         </div>
+
     </div>
     <!--<nav id="main_navigation">-->
         <!--<form role="form">-->
@@ -417,19 +462,6 @@
                     <!--<td>전공</td>-->
                 <!--</tr>-->
             <!--</table>-->
-            <!--<ul class="pagination" id="pagination">-->
-                <!--<li><a href="#">«</a></li>-->
-                <!--<li><a href="#">1</a></li>-->
-                <!--<li><a href="#">2</a></li>-->
-                <!--<li><a href="#">3</a></li>-->
-                <!--<li><a href="#">4</a></li>-->
-                <!--<li><a href="#">5</a></li>-->
-                <!--<li><a href="#">6</a></li>-->
-                <!--<li><a href="#">7</a></li>-->
-                <!--<li><a href="#">8</a></li>-->
-                <!--<li><a href="#">9</a></li>-->
-                <!--<li><a href="#">»</a></li>-->
-            <!--</ul>-->
         <!--</section>-->
     <!--</div>-->
 </div>
